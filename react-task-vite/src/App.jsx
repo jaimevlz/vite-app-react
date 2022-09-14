@@ -5,10 +5,11 @@ import { useState, useEffect } from "react";
 
 function App() {
   /*   const [tasks, setTasks] = useState([]); */
-  useEffect(() => {
+
+  /*   useEffect(() => {
     setTasks(data);
   }, []);
-
+ */
   /*   function createTask(taskTitle, taskDescription){
     setTasks([...tasks, {
       title: taskTitle,
@@ -22,10 +23,15 @@ function App() {
   } */
 
   return (
-    <>
-      <TaskForm createTask={createTask} />
-      <TaskList tasks={tasks} deleteTask={deleteTask} />
-    </>
+    <main className="bg-zinc-900 h-screen">
+      <div className="container mx-auto p-10">
+        <TaskForm />
+        <TaskList />
+      </div>
+      {/* ANTES DE TASK PROVIDER Y TASK CONTEXT SE PASABA LOS METODOS POR AQUI
+      <TaskForm createTask={createTask}/>
+      <TaskList tasks={tasks} deleteTask={deleteTask}/>*/}
+    </main>
   );
 }
 
